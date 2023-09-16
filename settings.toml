@@ -1,0 +1,14 @@
+title = "Open Cart Importer"
+
+# Logging settings
+logging.file_path = 'logs/oc_importer.log'
+logging.level = "INFO"
+logging.format = "<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<bold><level>{level}</level></bold>] <magenta>{name}</magenta> - {message}"
+logging.rotation = "1 day"
+logging.enqueue = "True"
+logging.colorize = "True"
+
+
+# OpenCart settings
+oc.database_prefix = "oc_"
+oc.store_id = 0
