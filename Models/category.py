@@ -38,8 +38,7 @@ class OC_Category_Description(OC_CategoryBaseModel):
 
 
 class OC_Category_Filter(OC_CategoryBaseModel):
-    category_id = fields.IntField(pk=True)
-    filter_id = fields.IntField()
+    filter_id = fields.IntField(pk=True)
 
     class Meta:
         table = f"{database_prefix}category_filter"
