@@ -1,3 +1,4 @@
+[global]
 title = "Open Cart Importer"
 
 # Logging settings
@@ -8,6 +9,9 @@ logging.rotation = "1 day"
 logging.enqueue = "True"
 logging.colorize = "True"
 
+# Database settings
+db.engine = "mariadb"
+db.timezone = "Europe/Moscow"
 
 # OpenCart settings
 oc.database_prefix = "oc_"
