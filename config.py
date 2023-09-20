@@ -1,14 +1,17 @@
 import Exceptions
-from main import logger
+from loguru import logger
+import sys
 from dynaconf import Dynaconf
 from tortoise.exceptions import ConfigurationError
+import logging
 
 settings = Dynaconf(
-    enviroments=True,
-    envvar_prefix="DYNACONF",
+    environments=True,
     default_env="global",
-    env="development",
     settings_files=['settings.toml', '.secrets.toml'],
+    envvar_prefix="DYNACONF",
+    env="development",
+    merge_enabled=True
 )
 
 # `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
@@ -20,18 +23,20 @@ host = settings.get("db.host")
 port = settings.get("db.port")
 user = settings.get("db.user")
 password = settings.get("db.password")
-database = settings.get("db.database")
+#database = settings.get("db.database")
+database = "test_db_oc"
 
 try:
-    Exceptions.check_config_for_null(engine, timezone, host, port, user, password, database)
-    Exceptions.check_config_database_engine(engine)
+    Exceptions.check_config_for_null(engine=engine, timezone=timezone, host=host, port=port, user=user,
+                                     password=password, database=database)
+    Exceptions.check_config_database_engine(engine=engine)
 except ValueError as e:
     logger.error(f"Database configuration error: {e}")
 except ConfigurationError as e:
     logger.error(f"Database configuration error: {e}")
 
-if Exceptions.check_config_database_engine(engine):
-    engine = "asyncmy"
+if Exceptions.check_config_database_engine(engine=engine):
+    engine = "mysql"
 
 tortoise_db_config = {
     'connections': {
@@ -48,12 +53,56 @@ tortoise_db_config = {
     },
     'apps': {
         'oc_importer': {
-            'models': {
-                'models': ['Models.product', 'Models.manufacturer', 'Models.category', 'Models.attributes'],
-                'default_connection': "default",
-            },
+            'models': ['Models.product', ],
+            # TODO 'Models.manufacturer', 'Models.category', 'Models.attributes'
         },
-        'use_tz': False,
-        'timezone': f'{timezone}',
     },
+    'use_tz': False,
+    'timezone': f'{timezone}',
 }
+
+# Remove the existing logger
+logger.remove()
+# Add a new logger with the given settings
+logger.add(
+    sys.stdout,
+    colorize=settings.get("logging.colorize"),
+    level=settings.get("logging.level"),
+    format=settings.get("logging.format"),
+)
+# Add logging to file
+logger.add(
+    settings.get("logging.file_path"),
+    level=settings.get("logging.level"),
+    format=settings.get("logging.format"),
+    rotation=settings.get("logging.rotation"),
+    enqueue=settings.get("logging.enqueue"),
+)
+
+# Handler class to intercept logger messages and convert them to Loguru format
+class InterceptHandler(logging.Handler):
+    def emit(self, record) -> None:
+        try:
+            level = logger.level(record.levelname).name
+        except ValueError:
+            level = record.levelno
+
+        frame, depth = sys._getframe(6), 6
+        while frame and frame.f_code.co_filename == logging.__file__:
+            frame = frame.f_back
+            depth += 1
+
+        logger.opt(depth=depth, exception=record.exc_info).log(
+            level, record.getMessage()
+        )
+
+
+# Create an interceptor for the loggers
+logger_db_client = logging.getLogger("tortoise.db_client")
+logger_db_client.setLevel(logging.DEBUG)
+logger_db_client.addHandler(InterceptHandler)
+
+logger_tortoise = logging.getLogger("tortoise")
+logger_tortoise.setLevel(logging.DEBUG)
+logger_tortoise.addHandler(InterceptHandler)
+

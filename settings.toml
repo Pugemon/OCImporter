@@ -3,7 +3,7 @@ title = "Open Cart Importer"
 
 # Logging settings
 logging.file_path = 'logs/oc_importer.log'
-logging.level = "INFO"
+logging.level = "DEBUG"
 logging.format = "<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<bold><level>{level}</level></bold>] <magenta>{name}</magenta> - {message}"
 logging.rotation = "1 day"
 logging.enqueue = "True"

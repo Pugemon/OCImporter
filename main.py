@@ -1,32 +1,14 @@
-import sys
+from tortoise import Tortoise, run_async
+from Models.product import OC_Product
+from config import tortoise_db_config, logger
 import asyncio
-import asyncmy
 
-from loguru import logger
-from tortoise import Tortoise
+if __name__ == '__main__':
+    logger.info("Starting")
+    async def init_db():
+        await Tortoise.init(
+            config=tortoise_db_config
+        )
+        await Tortoise.generate_schemas()
 
-from config import settings
-
-# Remove the existing logger
-logger.remove()
-# Add a new logger with the given settings
-logger.add(
-    sys.stdout,
-    colorize=settings.get("logging.colorize"),
-    level=settings.get("logging.level"),
-    format=settings.get("logging.format"),
-)
-# Add logging to file
-logger.add(
-    settings.get("logging.file_path"),
-    level=settings.get("logging.level"),
-    format=settings.get("logging.format"),
-    rotation=settings.get("logging.rotation"),
-    enqueue=settings.get("logging.enqueue"),
-)
-
-
-async def init_db():
-    await Tortoise.init(
-        db_url=settings.db.url,
-    )
+run_async(init_db())
