@@ -1,9 +1,15 @@
 import pandas as pd
+from pandas import DataFrame
 
 from config import logger
 import re
 
 sub_locale = r"\(.*\)"
+
+# TODO to custom Type
+PRODUCTS = "Products"
+ADDITIONAL_IMAGES = "AdditionalImages"
+PRODUCT_ATTRIBUTES = "ProductAttributes"
 
 
 class ExcelFileWork:
@@ -40,21 +46,23 @@ class ExcelFileWork:
 
 
 class ExcelValidator:
+    required_sheets = ["Products", "AdditionalImages",
+                       "ProductAttributes"]
+    required_columns = {
+        "Products": ["product_id", "name", "categories", "sku", "model",
+                     "quantity", "manufacturer", "image_name",
+                     "shipping", "price", "date_added", "description",
+                     "meta_title", "meta_description",
+                     "meta_keywords", "stock_status_id", "store_ids"],
+        "AdditionalImages": ["product_id", "image", "sort_order"],
+        "ProductAttributes": ["product_id", "attribute_group_id",
+                              "attribute_id", "text"]
+    }
+
     def __init__(self, workdir):
         self.workdir = workdir
         self.filenames = None
-        self.required_sheets = ["Products", "AdditionalImages",
-                                "ProductAttributes"]
-        self.required_columns = {
-            "Products": ["product_id", "name", "categories", "sku", "model",
-                         "quantity", "manufacturer", "image_name",
-                         "shipping", "price", "date_added", "description",
-                         "meta_title", "meta_description",
-                         "meta_keywords", "stock_status_id", "store_ids"],
-            "AdditionalImages": ["product_id", "image", "sort_order"],
-            "ProductAttributes": ["product_id", "attribute_group_id",
-                                  "attribute_id", "text"]
-        }
+
         self.data = None
 
     def read_excel(self):
@@ -124,13 +132,55 @@ class ExcelParser:
             self.data = validator.read_excel()  # Сохраняем данные из Excel в self.data
             if validator.validate_file():
                 if self.data is not None:
-                    if isinstance(self.data, pd.DataFrame):
-                        df = self.data
+                    if isinstance(self.data, dict):
                         logger.success("Data loaded")
-                        df.info()
+                        return True
                     else:
-                        logger.error("Data is not a DataFrame.")
+                        logger.error("Data is not a load")
         except Exception as e:
             logger.error(f"An error occurred while parsing the Excel file: {e}")
+        return False
 
-    
+    def files(self):
+        return self.data.keys()
+
+    def items_from_file(self, filename):
+
+        data_frame_products: DataFrame = self.data[filename][PRODUCTS]
+
+        data_frame_additional_images: DataFrame = self.data[filename][
+            "AdditionalImages"]
+        data_frame_product_attributes: DataFrame = self.data[filename][
+            "ProductAttributes"]
+
+        print(type(data_frame_products))
+
+        keys_to_dict = list(data_frame_products.keys())
+        for product in data_frame_products.itertuples():
+            dict_product = {}
+            list_additional_image = []
+            list_product_attribute = []
+
+            dict_product.update(product._asdict())
+            dict_product.pop("Index")
+            product_id = dict_product.get("product_id")  # TODO eroor handler
+
+            for item_additional_image in data_frame_additional_images[
+                data_frame_additional_images[
+                    "product_id"] == product_id].itertuples():
+                temp = item_additional_image._asdict()
+                temp.pop("Index")
+                list_additional_image.append(temp)
+
+            for item_product_attribute in data_frame_product_attributes[
+
+                data_frame_product_attributes[
+                    "product_id"] == product_id].itertuples():
+                temp = item_product_attribute._asdict()
+                temp.pop("Index")
+                list_product_attribute.append(temp)
+
+            dict_product.update({"additional_image": list_additional_image,
+                                 "product_attribute": list_product_attribute})
+
+            yield dict_product

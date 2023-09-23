@@ -16,6 +16,10 @@ class OCImporter:
         workdir = self.workdir
         excel_parser = xlsx.ExcelParser(workdir)
         excel_parser.parse_excel()
+        for file in excel_parser.files():
+            for item in excel_parser.items_from_file(file):
+                print(item)
+            pass
 
 
 def main():

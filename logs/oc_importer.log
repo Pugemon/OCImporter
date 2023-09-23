@@ -1233,3 +1233,371 @@ Timezone: Europe/Moscow
 2023-09-23 17:34:20 [INFO] Data.xlsx - Work with Excel
 2023-09-23 17:34:20 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
 2023-09-23 17:34:20 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 18:34:44 [INFO] config - Starting...
+2023-09-23 18:34:44 [INFO] config - Configuration Initialization...
+2023-09-23 18:34:44 [INFO] config - Configuration Initialized
+2023-09-23 18:34:44 [INFO] __main__ - Starting OCImporter
+2023-09-23 18:34:44 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 18:34:44 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 18:34:44 [INFO] __main__ - test
+2023-09-23 18:34:44 [INFO] Data.xlsx - Work with Excel
+2023-09-23 18:34:44 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 18:34:44 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 18:58:52 [INFO] config - Starting...
+2023-09-23 18:58:52 [INFO] config - Configuration Initialization...
+2023-09-23 18:58:52 [INFO] config - Configuration Initialized
+2023-09-23 18:58:52 [INFO] __main__ - Starting OCImporter
+2023-09-23 18:58:52 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 18:58:52 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 18:58:52 [INFO] __main__ - test
+2023-09-23 18:58:52 [INFO] Data.xlsx - Work with Excel
+2023-09-23 18:58:52 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 18:58:52 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 18:59:09 [INFO] config - Starting...
+2023-09-23 18:59:09 [INFO] config - Configuration Initialization...
+2023-09-23 18:59:09 [INFO] config - Configuration Initialized
+2023-09-23 18:59:09 [INFO] __main__ - Starting OCImporter
+2023-09-23 18:59:09 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 18:59:09 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 18:59:09 [INFO] __main__ - test
+2023-09-23 18:59:09 [INFO] Data.xlsx - Work with Excel
+2023-09-23 18:59:09 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 18:59:09 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 18:59:18 [INFO] config - Starting...
+2023-09-23 18:59:18 [INFO] config - Configuration Initialization...
+2023-09-23 18:59:18 [INFO] config - Configuration Initialized
+2023-09-23 18:59:18 [INFO] __main__ - Starting OCImporter
+2023-09-23 18:59:18 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 18:59:18 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 18:59:18 [INFO] __main__ - test
+2023-09-23 18:59:18 [INFO] Data.xlsx - Work with Excel
+2023-09-23 18:59:18 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 18:59:18 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 19:00:45 [INFO] config - Starting...
+2023-09-23 19:00:45 [INFO] config - Configuration Initialization...
+2023-09-23 19:00:45 [INFO] config - Configuration Initialized
+2023-09-23 19:00:45 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:00:45 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:00:45 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:00:45 [INFO] __main__ - test
+2023-09-23 19:00:45 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:00:45 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:00:45 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 19:01:04 [INFO] config - Starting...
+2023-09-23 19:01:04 [INFO] config - Configuration Initialization...
+2023-09-23 19:01:04 [INFO] config - Configuration Initialized
+2023-09-23 19:01:04 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:01:04 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:01:04 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:01:04 [INFO] __main__ - test
+2023-09-23 19:01:04 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:01:05 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:01:05 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 19:01:50 [INFO] config - Starting...
+2023-09-23 19:01:50 [INFO] config - Configuration Initialization...
+2023-09-23 19:01:50 [INFO] config - Configuration Initialized
+2023-09-23 19:01:50 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:01:50 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:01:50 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:01:50 [INFO] __main__ - test
+2023-09-23 19:01:50 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:01:50 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:01:50 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:02:19 [INFO] config - Starting...
+2023-09-23 19:02:19 [INFO] config - Configuration Initialization...
+2023-09-23 19:02:19 [INFO] config - Configuration Initialized
+2023-09-23 19:02:19 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:02:19 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:02:19 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:02:19 [INFO] __main__ - test
+2023-09-23 19:02:19 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:02:19 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:02:19 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:02:42 [INFO] config - Starting...
+2023-09-23 19:02:42 [INFO] config - Configuration Initialization...
+2023-09-23 19:02:42 [INFO] config - Configuration Initialized
+2023-09-23 19:02:42 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:02:42 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:02:42 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:02:42 [INFO] __main__ - test
+2023-09-23 19:02:42 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:02:42 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:02:42 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:06:27 [INFO] config - Starting...
+2023-09-23 19:06:27 [INFO] config - Configuration Initialization...
+2023-09-23 19:06:27 [INFO] config - Configuration Initialized
+2023-09-23 19:06:27 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:06:27 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:06:27 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:06:27 [INFO] __main__ - test
+2023-09-23 19:06:27 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:06:27 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:06:27 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:06:37 [INFO] config - Starting...
+2023-09-23 19:06:37 [INFO] config - Configuration Initialization...
+2023-09-23 19:06:37 [INFO] config - Configuration Initialized
+2023-09-23 19:06:37 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:06:37 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:06:37 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:06:37 [INFO] __main__ - test
+2023-09-23 19:06:37 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:06:38 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:06:38 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:07:00 [INFO] config - Starting...
+2023-09-23 19:07:00 [INFO] config - Configuration Initialization...
+2023-09-23 19:07:00 [INFO] config - Configuration Initialized
+2023-09-23 19:07:00 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:07:00 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:07:00 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:07:00 [INFO] __main__ - test
+2023-09-23 19:07:00 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:07:00 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:07:00 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:10:56 [INFO] config - Starting...
+2023-09-23 19:10:56 [INFO] config - Configuration Initialization...
+2023-09-23 19:10:56 [INFO] config - Configuration Initialized
+2023-09-23 19:10:56 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:10:56 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:10:56 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:10:56 [INFO] __main__ - test
+2023-09-23 19:10:56 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:10:56 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:10:56 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:11:57 [INFO] config - Starting...
+2023-09-23 19:11:57 [INFO] config - Configuration Initialization...
+2023-09-23 19:11:57 [INFO] config - Configuration Initialized
+2023-09-23 19:11:57 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:11:57 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:11:57 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:11:57 [INFO] __main__ - test
+2023-09-23 19:11:57 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:11:57 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:11:57 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:12:29 [INFO] config - Starting...
+2023-09-23 19:12:29 [INFO] config - Configuration Initialization...
+2023-09-23 19:12:29 [INFO] config - Configuration Initialized
+2023-09-23 19:12:29 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:12:29 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:12:29 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:12:29 [INFO] __main__ - test
+2023-09-23 19:12:29 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:12:29 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:12:29 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:14:40 [INFO] config - Starting...
+2023-09-23 19:14:40 [INFO] config - Configuration Initialization...
+2023-09-23 19:14:40 [INFO] config - Configuration Initialized
+2023-09-23 19:14:40 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:14:40 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:14:40 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:14:40 [INFO] __main__ - test
+2023-09-23 19:14:40 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:14:40 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:14:40 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:15:03 [INFO] config - Starting...
+2023-09-23 19:15:03 [INFO] config - Configuration Initialization...
+2023-09-23 19:15:03 [INFO] config - Configuration Initialized
+2023-09-23 19:15:03 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:15:03 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:15:03 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:15:03 [INFO] __main__ - test
+2023-09-23 19:15:03 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:15:03 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:15:03 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:16:00 [INFO] config - Starting...
+2023-09-23 19:16:00 [INFO] config - Configuration Initialization...
+2023-09-23 19:16:00 [INFO] config - Configuration Initialized
+2023-09-23 19:16:00 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:16:00 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:16:00 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:16:00 [INFO] __main__ - test
+2023-09-23 19:16:00 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:16:01 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:16:01 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:16:23 [INFO] config - Starting...
+2023-09-23 19:16:23 [INFO] config - Configuration Initialization...
+2023-09-23 19:16:23 [INFO] config - Configuration Initialized
+2023-09-23 19:16:23 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:16:23 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:16:23 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:16:23 [INFO] __main__ - test
+2023-09-23 19:16:23 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:16:23 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:16:23 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:16:56 [INFO] config - Starting...
+2023-09-23 19:16:56 [INFO] config - Configuration Initialization...
+2023-09-23 19:16:56 [INFO] config - Configuration Initialized
+2023-09-23 19:16:56 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:16:56 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:16:56 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:16:56 [INFO] __main__ - test
+2023-09-23 19:16:56 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:16:56 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:16:56 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:18:06 [INFO] config - Starting...
+2023-09-23 19:18:06 [INFO] config - Configuration Initialization...
+2023-09-23 19:18:06 [INFO] config - Configuration Initialized
+2023-09-23 19:18:06 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:18:06 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:18:06 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:18:06 [INFO] __main__ - test
+2023-09-23 19:18:06 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:18:06 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:18:06 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:24:31 [INFO] config - Starting...
+2023-09-23 19:24:31 [INFO] config - Configuration Initialization...
+2023-09-23 19:24:31 [INFO] config - Configuration Initialized
+2023-09-23 19:24:31 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:24:31 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:24:31 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:24:31 [INFO] __main__ - test
+2023-09-23 19:24:31 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:24:31 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:24:31 [SUCCESS] Data.xlsx - Data loaded
+2023-09-23 19:33:51 [INFO] config - Starting...
+2023-09-23 19:33:51 [INFO] config - Configuration Initialization...
+2023-09-23 19:33:51 [INFO] config - Configuration Initialized
+2023-09-23 19:33:51 [INFO] __main__ - Starting OCImporter
+2023-09-23 19:33:51 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 19:33:51 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 19:33:51 [INFO] __main__ - test
+2023-09-23 19:33:51 [INFO] Data.xlsx - Work with Excel
+2023-09-23 19:33:52 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 19:33:52 [SUCCESS] Data.xlsx - Data loaded
