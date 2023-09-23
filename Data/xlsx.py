@@ -4,8 +4,6 @@ from pandas import DataFrame
 from config import logger
 import re
 
-sub_locale = r"\(.*\)"
-
 # TODO to custom Type
 PRODUCTS = "Products"
 ADDITIONAL_IMAGES = "AdditionalImages"
@@ -101,12 +99,10 @@ class ExcelValidator:
 
             for sheet_name in self.required_sheets:
                 missing_columns = []
-                list_keys = [re.sub(sub_locale, '', value) for value in
-                             file_dataframe[sheet_name].keys()]
 
                 keys_to_check = self.required_columns[sheet_name]
                 for key_to_check in keys_to_check:
-                    if key_to_check not in list_keys:
+                    if key_to_check not in file_dataframe[sheet_name].keys():
                         missing_columns.append(key_to_check)
 
                 if missing_columns:
