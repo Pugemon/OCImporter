@@ -1,9 +1,11 @@
-import Exceptions
-from loguru import logger
-import sys
-from dynaconf import Dynaconf
-from tortoise.exceptions import ConfigurationError
 import logging
+import sys
+
+from dynaconf import Dynaconf
+from loguru import logger
+from tortoise.exceptions import ConfigurationError
+
+from Exceptions import exceptions, check_config_database_engine, check_config_for_null
 
 settings = Dynaconf(
     environments=True,
@@ -11,55 +13,12 @@ settings = Dynaconf(
     settings_files=['settings.toml', '.secrets.toml'],
     envvar_prefix="DYNACONF",
     env="development",
-    merge_enabled=True
+    merge_enabled=True,
 )
 
 # `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
 # `settings_files` = Load these files in the order.
 
-engine = settings.get("db.engine")
-timezone = settings.get("db.timezone")
-host = settings.get("db.host")
-port = settings.get("db.port")
-user = settings.get("db.user")
-password = settings.get("db.password")
-#database = settings.get("db.database")
-database = "test_db_oc"
-
-try:
-    Exceptions.check_config_for_null(engine=engine, timezone=timezone, host=host, port=port, user=user,
-                                     password=password, database=database)
-    Exceptions.check_config_database_engine(engine=engine)
-except ValueError as e:
-    logger.error(f"Database configuration error: {e}")
-except ConfigurationError as e:
-    logger.error(f"Database configuration error: {e}")
-
-if Exceptions.check_config_database_engine(engine=engine):
-    engine = "mysql"
-
-tortoise_db_config = {
-    'connections': {
-        'default': {
-            'engine': f'tortoise.backends.{engine}',
-            'credentials': {
-                'database': f'{database}',
-                'host': f'{host}',
-                'password': f'{password}',
-                'port': f'{port}',
-                'user': f'{user}',
-            }
-        }
-    },
-    'apps': {
-        'oc_importer': {
-            'models': ['Models.product', ],
-            # TODO 'Models.manufacturer', 'Models.category', 'Models.attributes'
-        },
-    },
-    'use_tz': False,
-    'timezone': f'{timezone}',
-}
 
 # Remove the existing logger
 logger.remove()
@@ -79,9 +38,13 @@ logger.add(
     enqueue=settings.get("logging.enqueue"),
 )
 
+logger.info("Starting...")
+logger.info("Configuration Initialization...")
+
+
 # Handler class to intercept logger messages and convert them to Loguru format
 class InterceptHandler(logging.Handler):
-    def emit(self, record) -> None:
+    def emit(self, record):
         try:
             level = logger.level(record.levelname).name
         except ValueError:
@@ -106,3 +69,61 @@ logger_tortoise = logging.getLogger("tortoise")
 logger_tortoise.setLevel(logging.DEBUG)
 logger_tortoise.addHandler(InterceptHandler)
 
+
+def configure_tortoise():
+    engine = settings.get("db.engine")
+    timezone = settings.get("db.timezone")
+    host = settings.get("db.host")
+    port = settings.get("db.port")
+    user = settings.get("db.user")
+    password = settings.get("db.password")
+    # database = settings.get("db.database")
+    database = "test_db_oc"
+
+    try:
+        check_config_for_null(engine=engine, timezone=timezone, host=host, port=port, user=user,
+                                         password=password, database=database)
+        check_config_database_engine(engine=engine)
+    except exceptions.ConfigurationError as e:
+        logger.error(f"Database configuration error: {e}")
+    except ConfigurationError as e:
+        logger.error(f"Database configuration error: {e}")
+
+    if check_config_database_engine(engine=engine):
+        engine = "mysql"
+
+    tortoise_db_config = {
+        'connections': {
+            'default': {
+                'engine': f'tortoise.backends.{engine}',
+                'credentials': {
+                    'database': f'{database}',
+                    'host': f'{host}',
+                    'password': f'{password}',
+                    'port': f'{port}',
+                    'user': f'{user}',
+                }
+            }
+        },
+        'apps': {
+            'oc_importer': {
+                'models': ['Models.product', ],
+                # TODO 'Models.manufacturer', 'Models.category', 'Models.attributes'
+            },
+        },
+        'use_tz': False,
+        'timezone': f'{timezone}',
+    }
+    logger.info("Database configuration: \n"
+                f"Engine: {engine} \n"
+                f"Database: {database} \n"
+                f"Host: {host} \n"
+                f"Port: {port} \n"
+                f"User: {user} \n"
+                f"Timezone: {timezone}")
+    del engine, timezone, database, host, password, port, user
+
+    return tortoise_db_config
+
+
+logger.info("Configuration Initialized")

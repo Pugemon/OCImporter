@@ -1,5 +1,6 @@
 from tortoise import fields
 from tortoise.models import Model
+
 from config import settings
 
 database_prefix = settings.get("oc.database_prefix")
