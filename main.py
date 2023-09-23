@@ -20,8 +20,8 @@ class OCImporter:
 
 def main():
     logger.info("test")
-    ocimporter = OCImporter()
-    ocimporter.work_with_excel()
+    oc_importer = OCImporter()
+    oc_importer.work_with_excel()
 
 
 if __name__ == '__main__':
