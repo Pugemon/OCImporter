@@ -1,6 +1,9 @@
 import pandas as pd
 
 from config import logger
+import re
+
+sub_locale = r"\(.*\)"
 
 
 class ExcelFileWork:
@@ -61,10 +64,9 @@ class ExcelValidator:
             excel_file_work = ExcelFileWork(self.workdir)
             self.filenames = excel_file_work.get_filenames()
             for filename in self.filenames:
-                print(filename)
                 sheet_data = pd.read_excel(filename,
                                            sheet_name=self.required_sheets,
-                                           index_col=0, header=0)
+                                           header=0)
                 if isinstance(sheet_data,
                               dict):  # Проверка, что данные успешно загружены как dict
                     self.data.update({filename: sheet_data})
@@ -90,17 +92,22 @@ class ExcelValidator:
                     return False
 
             for sheet_name in self.required_sheets:
-                print(sheet_name, file_dataframe[sheet_name].keys())
-                for item in file_dataframe[sheet_name].itertuples():
-                    print(item)
-                # if missing_columns:
-                #     logger.error(
-                #         f"Missing columns in sheet '{sheet_name}': {missing_columns}")
-                #     return False
+                missing_columns = []
+                list_keys = [re.sub(sub_locale, '', value) for value in
+                             file_dataframe[sheet_name].keys()]
 
-        logger.success(
-            "All required sheets and columns are present in the Excel file.")
-        return True
+                keys_to_check = self.required_columns[sheet_name]
+                for key_to_check in keys_to_check:
+                    if key_to_check not in list_keys:
+                        missing_columns.append(key_to_check)
+
+                if missing_columns:
+                    logger.error(
+                        f"Missing columns in sheet '{sheet_name}': {missing_columns}")
+                    return False
+            logger.success(
+                f"All required sheets and columns are present in the {filename} Excel file.")
+            return True
 
 
 class ExcelParser:

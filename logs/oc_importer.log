@@ -1005,3 +1005,231 @@ Timezone: Europe/Moscow
 2023-09-23 16:54:41 [INFO] Data.xlsx - Work with Excel
 2023-09-23 16:54:41 [SUCCESS] Data.xlsx - All required sheets and columns are present in the Excel file.
 2023-09-23 16:54:41 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 17:22:35 [INFO] config - Starting...
+2023-09-23 17:22:35 [INFO] config - Configuration Initialization...
+2023-09-23 17:22:35 [INFO] config - Configuration Initialized
+2023-09-23 17:22:35 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:22:35 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:22:35 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:22:35 [INFO] __main__ - test
+2023-09-23 17:22:35 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:22:36 [ERROR] Data.xlsx - An error occurred while parsing the Excel file: name 'f' is not defined
+2023-09-23 17:22:57 [INFO] config - Starting...
+2023-09-23 17:22:57 [INFO] config - Configuration Initialization...
+2023-09-23 17:22:57 [INFO] config - Configuration Initialized
+2023-09-23 17:22:57 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:22:57 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:22:57 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:22:57 [INFO] __main__ - test
+2023-09-23 17:22:57 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:22:57 [ERROR] Data.xlsx - An error occurred while parsing the Excel file: name 'f' is not defined
+2023-09-23 17:24:39 [INFO] config - Starting...
+2023-09-23 17:24:39 [INFO] config - Configuration Initialization...
+2023-09-23 17:24:39 [INFO] config - Configuration Initialized
+2023-09-23 17:24:39 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:24:39 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:24:39 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:24:39 [INFO] __main__ - test
+2023-09-23 17:24:39 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:24:39 [ERROR] Data.xlsx - An error occurred while parsing the Excel file: name 'f' is not defined
+2023-09-23 17:24:57 [INFO] config - Starting...
+2023-09-23 17:24:57 [INFO] config - Configuration Initialization...
+2023-09-23 17:24:57 [INFO] config - Configuration Initialized
+2023-09-23 17:24:57 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:24:57 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:24:57 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:24:57 [INFO] __main__ - test
+2023-09-23 17:24:57 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:24:57 [SUCCESS] Data.xlsx - All required sheets and columns are present in the Excel file.
+2023-09-23 17:24:57 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 17:28:09 [INFO] config - Starting...
+2023-09-23 17:28:09 [INFO] config - Configuration Initialization...
+2023-09-23 17:28:09 [INFO] config - Configuration Initialized
+2023-09-23 17:28:09 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:28:09 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:28:09 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:28:09 [INFO] __main__ - test
+2023-09-23 17:28:09 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:28:09 [ERROR] Data.xlsx - Missing columns in sheet 'Products': [['product_id', 'name', 'categories', 'sku', 'model', 'quantity', 'manufacturer', 'image_name', 'shipping', 'price', 'date_added', 'description', 'meta_title', 'meta_description', 'meta_keywords', 'stock_status_id', 'store_ids']]
+2023-09-23 17:28:37 [INFO] config - Starting...
+2023-09-23 17:28:37 [INFO] config - Configuration Initialization...
+2023-09-23 17:28:37 [INFO] config - Configuration Initialized
+2023-09-23 17:28:37 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:28:37 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:28:37 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:28:37 [INFO] __main__ - test
+2023-09-23 17:28:37 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:28:37 [ERROR] Data.xlsx - Missing columns in sheet 'Products': [['product_id', 'name', 'categories', 'sku', 'model', 'quantity', 'manufacturer', 'image_name', 'shipping', 'price', 'date_added', 'description', 'meta_title', 'meta_description', 'meta_keywords', 'stock_status_id', 'store_ids']]
+2023-09-23 17:29:07 [INFO] config - Starting...
+2023-09-23 17:29:07 [INFO] config - Configuration Initialization...
+2023-09-23 17:29:07 [INFO] config - Configuration Initialized
+2023-09-23 17:29:07 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:29:07 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:29:07 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:29:07 [INFO] __main__ - test
+2023-09-23 17:29:07 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:29:07 [ERROR] Data.xlsx - Missing columns in sheet 'Products': [['product_id', 'name', 'categories', 'sku', 'model', 'quantity', 'manufacturer', 'image_name', 'shipping', 'price', 'date_added', 'description', 'meta_title', 'meta_description', 'meta_keywords', 'stock_status_id', 'store_ids']]
+2023-09-23 17:29:23 [INFO] config - Starting...
+2023-09-23 17:29:23 [INFO] config - Configuration Initialization...
+2023-09-23 17:29:23 [INFO] config - Configuration Initialized
+2023-09-23 17:29:23 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:29:23 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:29:23 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:29:23 [INFO] __main__ - test
+2023-09-23 17:29:23 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:29:24 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': [['product_id', 'image', 'sort_order']]
+2023-09-23 17:31:12 [INFO] config - Starting...
+2023-09-23 17:31:12 [INFO] config - Configuration Initialization...
+2023-09-23 17:31:12 [INFO] config - Configuration Initialized
+2023-09-23 17:31:12 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:31:12 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:31:12 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:31:12 [INFO] __main__ - test
+2023-09-23 17:31:12 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:31:13 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': [['product_id', 'image', 'sort_order']]
+2023-09-23 17:32:21 [INFO] config - Starting...
+2023-09-23 17:32:21 [INFO] config - Configuration Initialization...
+2023-09-23 17:32:21 [INFO] config - Configuration Initialized
+2023-09-23 17:32:21 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:32:21 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:32:21 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:32:21 [INFO] __main__ - test
+2023-09-23 17:32:21 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:32:21 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': [['product_id', 'image', 'sort_order']]
+2023-09-23 17:32:51 [INFO] config - Starting...
+2023-09-23 17:32:51 [INFO] config - Configuration Initialization...
+2023-09-23 17:32:51 [INFO] config - Configuration Initialized
+2023-09-23 17:32:51 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:32:51 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:32:51 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:32:51 [INFO] __main__ - test
+2023-09-23 17:32:51 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:32:51 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 17:32:51 [ERROR] Data.xlsx - Data is not a DataFrame.
+2023-09-23 17:33:36 [INFO] config - Starting...
+2023-09-23 17:33:36 [INFO] config - Configuration Initialization...
+2023-09-23 17:33:36 [INFO] config - Configuration Initialized
+2023-09-23 17:33:36 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:33:36 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:33:36 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:33:36 [INFO] __main__ - test
+2023-09-23 17:33:36 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:33:36 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': [['product_id', 'image', 'sort_order']]
+2023-09-23 17:33:53 [INFO] config - Starting...
+2023-09-23 17:33:53 [INFO] config - Configuration Initialization...
+2023-09-23 17:33:53 [INFO] config - Configuration Initialized
+2023-09-23 17:33:53 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:33:53 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:33:53 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:33:53 [INFO] __main__ - test
+2023-09-23 17:33:53 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:33:53 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': [['product_id', 'image', 'sort_order']]
+2023-09-23 17:34:14 [INFO] config - Starting...
+2023-09-23 17:34:14 [INFO] config - Configuration Initialization...
+2023-09-23 17:34:14 [INFO] config - Configuration Initialized
+2023-09-23 17:34:14 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:34:14 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:34:14 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:34:14 [INFO] __main__ - test
+2023-09-23 17:34:14 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:34:14 [ERROR] Data.xlsx - Missing columns in sheet 'AdditionalImages': ['sort_order']
+2023-09-23 17:34:20 [INFO] config - Starting...
+2023-09-23 17:34:20 [INFO] config - Configuration Initialization...
+2023-09-23 17:34:20 [INFO] config - Configuration Initialized
+2023-09-23 17:34:20 [INFO] __main__ - Starting OCImporter
+2023-09-23 17:34:20 [ERROR] config - Database configuration error: You did not specify db.host in the configuration file.
+2023-09-23 17:34:20 [INFO] config - Database configuration: 
+Engine: mysql 
+Database: test_db_oc 
+Host: None 
+Port: None 
+User: None 
+Timezone: Europe/Moscow
+2023-09-23 17:34:20 [INFO] __main__ - test
+2023-09-23 17:34:20 [INFO] Data.xlsx - Work with Excel
+2023-09-23 17:34:20 [SUCCESS] Data.xlsx - All required sheets and columns are present in the /home/taruu/PycharmProjects/OCImporter/test.xlsx Excel file.
+2023-09-23 17:34:20 [ERROR] Data.xlsx - Data is not a DataFrame.
