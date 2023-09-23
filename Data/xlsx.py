@@ -132,3 +132,5 @@ class ExcelParser:
                         logger.error("Data is not a DataFrame.")
         except Exception as e:
             logger.error(f"An error occurred while parsing the Excel file: {e}")
+
+    
