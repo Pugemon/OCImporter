@@ -1,64 +1,38 @@
-from tortoise import fields
-from tortoise.models import Model
-
-from config import settings
-
-database_prefix = settings.get("oc.database_prefix")
+﻿from Models import Base
+from sqlalchemy import Column, Index
+from sqlalchemy.dialects.mysql import DATETIME, DECIMAL, TINYINT, TEXT, INTEGER, VARCHAR
 
 
-class OC_CategoryBaseModel(Model):
-    category_id = fields.IntField(unique=True, pk=True)
+class CategoryBase(Base):
+    __abstract__ = True
+    __tablename__ = 'category'
 
 
-class OC_Category(OC_CategoryBaseModel):
-    image = fields.CharField(max_length=255, null=True)
-    parent_id = fields.IntField(default=0)
-    top = fields.SmallIntField(default=0)
-    column = fields.IntField(default=0)
-    sort_order = fields.IntField(default=0)
-    status = fields.SmallIntField(default=1)
-    date_added = fields.DatetimeField(auto_now_add=True)
-    date_modified = fields.DatetimeField(auto_now=True)
+class Category(CategoryBase):
+    __tablename__ = CategoryBase.__tablename__
 
-    class Meta:
-        table = f"{database_prefix}category"
-        ordering = ["category_id"]
+    category_id = Column(INTEGER(11), primary_key=True)
+    image = Column(VARCHAR(255), default=None)
+    parent_id = Column(INTEGER(11), nullable=False, default=0)
+    top = Column(TINYINT(1), nullable=False)
+    column = Column(INTEGER(3), nullable=False)
+    sort_order = Column(INTEGER(3), nullable=False, default=0)
+    status = Column(TINYINT(1), nullable=False, default=0)
+    date_added = Column(DATETIME, nullable=False)
+    date_modified = Column(DATETIME, nullable=False)
 
-
-class OC_Category_Description(OC_CategoryBaseModel):
-    language_id = fields.IntField(default=1, pk=True)
-    name = fields.CharField(max_length=255)
-    description = fields.TextField()
-    meta_title = fields.CharField(max_length=255)
-    meta_description = fields.CharField(max_length=255)
-    meta_keyword = fields.CharField(max_length=255)
-
-    class Meta:
-        table = f"{database_prefix}category_description"
-        ordering = ["category_id"]
+    __table_args__ = Index('parent_id', 'parent_id')
 
 
-class OC_Category_Filter(OC_CategoryBaseModel):
-    filter_id = fields.IntField(pk=True)
+class CategoryDescription(CategoryBase):
+    __tablename__ = CategoryBase.__tablename__ + '_description'
 
-    class Meta:
-        table = f"{database_prefix}category_filter"
-        ordering = ["category_id"]
+    category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    language_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    name = Column(VARCHAR(255), nullable=False)
+    description = Column(TEXT, nullable=False)
+    meta_title = Column(VARCHAR(255), nullable=False)
+    meta_description = Column(VARCHAR(255), nullable=False)
+    meta_keyword = Column(VARCHAR(255), nullable=False)
 
-
-class OC_Category_Path(OC_CategoryBaseModel):
-    category_id = fields.IntField(unique=False, pk=True)
-    path_id = fields.IntField(unique=False)
-    level = fields.IntField(default=0)
-
-    class Meta:
-        table = f"{database_prefix}category_path"
-        ordering = ["category_id"]
-
-
-class OC_Category_To_Store(OC_CategoryBaseModel):
-    store_id = fields.IntField(default=0, pk=True)
-
-    class Meta:
-        table = f"{database_prefix}category_to_store"
-        ordering = ["category_id"]
+    __table_args__ = Index('name', 'name')

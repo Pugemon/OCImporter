@@ -2,3 +2,7 @@
 venv/*
 # Ignore dynaconf secret files
 .secrets.*
+# Ignore temp files
+logs/*
+# Ignore IDEA files
+.idea

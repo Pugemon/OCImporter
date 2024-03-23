@@ -10,7 +10,7 @@ from Exceptions import exceptions, check_config_database_engine, check_config_fo
 settings = Dynaconf(
     environments=True,
     default_env="global",
-    settings_files=['settings.toml', '.secrets.toml'],
+    settings_files=['../settings.toml', '../.secrets.toml'],
     envvar_prefix="DYNACONF",
     env="development",
     merge_enabled=True,
