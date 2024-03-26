@@ -1,15 +1,16 @@
-﻿from Models import Base
-from sqlalchemy import Column, Index
+﻿from sqlalchemy import Column, Index
 from sqlalchemy.dialects.mysql import TINYINT, TEXT, INTEGER, VARCHAR
 
+from Models import Base
 
-class AddressBase(Base):
+
+class _AddressBase(Base):
     __abstract__ = True
     __tablename__ = 'address'
 
 
-class Address(AddressBase):
-    __tablename__ = AddressBase.__tablename__
+class Address(_AddressBase):
+    __tablename__ = _AddressBase.__tablename__
 
     address_id = Column(INTEGER(11), primary_key=True)
     customer_id = Column(INTEGER(11), nullable=False)
@@ -26,13 +27,12 @@ class Address(AddressBase):
     default = Column(TINYINT(1), nullable=False)
 
     __table_args__ = (
-        Index('customer_id', 'customer_id'),
-        {'mysql_engine': 'MyISAM', 'mysql_default_charset': 'utf8mb4', 'mysql_collate': 'utf8mb4_general_ci'}
+        Index('customer_id', 'customer_id')
     )
 
 
-class AddressFormat(AddressBase):
-    __tablename__ = AddressBase.__tablename__ + '_format'
+class AddressFormat(_AddressBase):
+    __tablename__ = _AddressBase.__tablename__ + '_format'
 
     address_format_id = Column(INTEGER(11), primary_key=True)
     name = Column(VARCHAR(128), nullable=False)

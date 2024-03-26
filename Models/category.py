@@ -1,15 +1,16 @@
-﻿from Models import Base
-from sqlalchemy import Column, Index
-from sqlalchemy.dialects.mysql import DATETIME, DECIMAL, TINYINT, TEXT, INTEGER, VARCHAR
+﻿from sqlalchemy import Column, Index
+from sqlalchemy.dialects.mysql import DATETIME, TINYINT, TEXT, INTEGER, VARCHAR
+
+from Models import Base
 
 
-class CategoryBase(Base):
+class _CategoryBase(Base):
     __abstract__ = True
     __tablename__ = 'category'
 
 
-class Category(CategoryBase):
-    __tablename__ = CategoryBase.__tablename__
+class Category(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__
 
     category_id = Column(INTEGER(11), primary_key=True)
     image = Column(VARCHAR(255), default=None)
@@ -24,8 +25,8 @@ class Category(CategoryBase):
     __table_args__ = Index('parent_id', 'parent_id')
 
 
-class CategoryDescription(CategoryBase):
-    __tablename__ = CategoryBase.__tablename__ + '_description'
+class CategoryDescription(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__ + '_description'
 
     category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
     language_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
@@ -36,3 +37,33 @@ class CategoryDescription(CategoryBase):
     meta_keyword = Column(VARCHAR(255), nullable=False)
 
     __table_args__ = Index('name', 'name')
+
+
+class CategoryFilter(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__ + '_filter'
+
+    category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    filter_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+
+
+class CategoryPath(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__ + '_path'
+
+    category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    path_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    level = Column(INTEGER(11), nullable=False)
+
+
+class CategoryToLayout(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__ + '_to_layout'
+
+    category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    store_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    layout_id = Column(INTEGER(11), nullable=False)
+
+
+class CategoryToStore(_CategoryBase):
+    __tablename__ = _CategoryBase.__tablename__ + '_to_store'
+
+    category_id = Column(INTEGER(11), primary_key=True, autoincrement=False)
+    store_id = Column(INTEGER(11), primary_key=True, autoincrement=False)

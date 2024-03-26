@@ -2,7 +2,6 @@ import pandas as pd
 from pandas import DataFrame
 
 from config import logger
-import re
 
 # TODO to custom Type
 PRODUCTS = "Products"

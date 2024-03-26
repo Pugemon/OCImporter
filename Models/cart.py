@@ -1,10 +1,16 @@
-﻿from Models import Base
-from sqlalchemy import Column, Index
+﻿from sqlalchemy import Column, Index
 from sqlalchemy.dialects.mysql import DATETIME, DECIMAL, TINYINT, TEXT, INTEGER, VARCHAR
 
+from Models import Base
 
-class Cart(Base):
+
+class _CartBase(Base):
+    __abstract__ = True
     __tablename__ = 'cart'
+
+
+class Cart(_CartBase):
+    __tablename__ = _CartBase.__tablename__
 
     cart_id = Column(INTEGER(11, unsigned=True), primary_key=True)
     api_id = Column(INTEGER(11), nullable=False)
@@ -20,5 +26,4 @@ class Cart(Base):
 
     __table_args__ = (
         Index('cart_id', 'api_id', 'customer_id', 'session_id', 'product_id', 'subscription_plan_id'),
-        {'mysql_engine': 'MyISAM', 'mysql_default_charset': 'utf8mb4', 'mysql_collate': 'utf8mb4_general_ci'}
     )

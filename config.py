@@ -82,7 +82,7 @@ def configure_tortoise():
 
     try:
         check_config_for_null(engine=engine, timezone=timezone, host=host, port=port, user=user,
-                                         password=password, database=database)
+                              password=password, database=database)
         check_config_database_engine(engine=engine)
     except exceptions.ConfigurationError as e:
         logger.error(f"Database configuration error: {e}")

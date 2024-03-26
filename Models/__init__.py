@@ -1,8 +1,8 @@
 ﻿from typing import Any
 
-from config import settings
-
 from sqlalchemy.ext.declarative import declarative_base, DeclarativeMeta
+
+from config import settings
 
 oc_database_prefix = settings.get("oc.database_prefix")
 
